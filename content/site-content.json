@@ -1,0 +1,77 @@
+{
+  "services": [
+    {
+      "title": "Residential Roof Replacement",
+      "description": "High-quality replacement systems with dimensional shingles, leak protection, and clean architectural finishes."
+    },
+    {
+      "title": "Roof Repair & Leak Response",
+      "description": "Targeted repair services for storm damage, flashing issues, and active leaks with rapid turnaround."
+    },
+    {
+      "title": "Commercial Roofing",
+      "description": "Flat and low-slope roofing solutions built for durability, drainage performance, and lower maintenance."
+    },
+    {
+      "title": "Preventive Roof Maintenance",
+      "description": "Proactive inspections and maintenance programs that extend roof life and reduce emergency costs."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Premium Asphalt Roof Transformation",
+      "location": "Glen Rock, NJ",
+      "summary": "Replaced aging roof with weather-resistant architectural shingles and upgraded ventilation.",
+      "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Large suburban house with new premium asphalt shingle roof"
+    },
+    {
+      "title": "Luxury Metal Roofing Installation",
+      "location": "Edgewater, NJ",
+      "summary": "Installed standing seam metal roof for sleek aesthetics and long-term resilience.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Modern home featuring a standing seam metal roof"
+    },
+    {
+      "title": "Commercial Flat Roof Retrofit",
+      "location": "Paterson, NJ",
+      "summary": "Full membrane retrofit and drainage optimization for a commercial facility.",
+      "image": "https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Commercial building with a newly installed flat roof system"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "melissa-g-homeowner",
+      "quote": "Excellent communication and flawless craftsmanship. The roof changed the look of our whole home.",
+      "author": "Melissa G.",
+      "role": "Homeowner"
+    },
+    {
+      "id": "r-thompson-business-owner",
+      "quote": "Basile Contractors delivered ahead of schedule and kept our business operations running smoothly.",
+      "author": "R. Thompson",
+      "role": "Business Owner"
+    },
+    {
+      "id": "carla-m-homeowner",
+      "quote": "Very professional team, fair pricing, and the cleanup was spotless. Highly recommended.",
+      "author": "Carla M.",
+      "role": "Homeowner"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What roofing materials do you install?",
+      "answer": "We install architectural shingles, metal roofing systems, and commercial membrane roofing based on your property needs."
+    },
+    {
+      "question": "Do you provide free estimates?",
+      "answer": "Yes, every project starts with a free estimate and detailed consultation."
+    },
+    {
+      "question": "Are your projects insured and warrantied?",
+      "answer": "Absolutely. We carry proper insurance and provide workmanship coverage along with manufacturer warranties."
+    }
+  ]
+}
