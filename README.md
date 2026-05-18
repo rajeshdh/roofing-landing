@@ -7,7 +7,7 @@ Modern, elegant, SEO-focused landing page designed to generate roofing leads.
 Because this is a static website, you can serve it with any static server.
 
 ```bash
-cd /home/runner/work/roofing-landing/roofing-landing
+cd roofing-landing
 python3 -m http.server 4173
 ```
 
@@ -17,7 +17,7 @@ Then open: `http://localhost:4173`
 
 Main editable content is in:
 
-- `/home/runner/work/roofing-landing/roofing-landing/content/site-content.json`
+- `./content/site-content.json`
 
 You can add/update:
 
