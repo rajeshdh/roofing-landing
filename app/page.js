@@ -21,10 +21,9 @@ const stats = [
   { value: '450+', label: 'Projects Completed' },
   { value: '24/7', label: 'Emergency Roof Support' },
 ];
+const currentYear = new Date().getFullYear();
 
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <>
       <main id="top">
@@ -207,7 +206,7 @@ export default function Home() {
               </label>
               <label>
                 Service Needed
-                <select name="service" required defaultValue="" aria-label="Service Needed">
+                <select name="service" required defaultValue="">
                   <option value="" disabled>
                     Select one
                   </option>

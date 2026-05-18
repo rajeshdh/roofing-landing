@@ -19,6 +19,8 @@ npm run lint
 npm run build
 ```
 
+`package.json` includes a `postcss` override so the Next.js dependency tree stays on a non-vulnerable PostCSS release.
+
 ## Updating content
 
 Main editable content is in:
