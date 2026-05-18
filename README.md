@@ -1,23 +1,29 @@
 # Basile Contractors LLC — Roofing Landing + Portfolio
 
-Modern, elegant, SEO-focused landing page designed to generate roofing leads.
+Modern, elegant, SEO-focused landing page built with Next.js to generate roofing leads.
 
 ## Run locally
 
-Because this is a static website, you can serve it with any static server.
-
 ```bash
-cd roofing-landing
-python3 -m http.server 4173
+cd /home/runner/work/roofing-landing/roofing-landing
+npm install
+npm run dev
 ```
 
-Then open: `http://localhost:4173`
+Then open: `http://localhost:3000`
+
+## Production checks
+
+```bash
+npm run lint
+npm run build
+```
 
 ## Updating content
 
 Main editable content is in:
 
-- `./content/site-content.json`
+- `/home/runner/work/roofing-landing/roofing-landing/content/site-content.json`
 
 You can add/update:
 
@@ -26,8 +32,8 @@ You can add/update:
 - Testimonials
 - FAQ items
 
-The page automatically renders those sections from this JSON file.
+The Next.js homepage renders those sections directly from this JSON file.
 
 ## Lead form handling
 
-The contact form posts to `https://formsubmit.co/` (HTTPS) so leads can be captured without a custom backend. Replace this with your own preferred backend/CMS form endpoint at deployment time if needed.
+The contact form posts to `https://formsubmit.co/` (HTTPS) so leads can be captured without a custom backend. Replace this with your own preferred backend or CRM form endpoint at deployment time if needed.
