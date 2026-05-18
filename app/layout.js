@@ -8,15 +8,6 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Basile Contractors LLC | Roofing Experts',
   description,
-  keywords: [
-    'Basile Contractors LLC',
-    'roofing contractor',
-    'roof replacement',
-    'roof repair',
-    'commercial roofing',
-    'roofing portfolio',
-    'emergency roofing',
-  ],
   alternates: {
     canonical: '/',
   },

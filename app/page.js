@@ -185,7 +185,7 @@ export default function Home() {
             >
               <input type="hidden" name="_subject" value="New Basile Contractors LLC lead" />
               <input type="hidden" name="_template" value="table" />
-              <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="honeypot" />
+              <input type="text" name="_honey" autoComplete="off" className="honeypot" aria-hidden="true" />
               <label>
                 Full Name
                 <input type="text" name="name" required />
