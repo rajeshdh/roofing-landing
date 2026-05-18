@@ -288,8 +288,8 @@ nav a:hover,
 .status-pill,
 .service-chip-list li {
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(29, 29, 27, 0.08);
-  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(29, 29, 27, 0.14);
+  background: rgba(255, 255, 255, 0.86);
   padding: 0.72rem 1rem;
   font-size: 0.78rem;
   font-weight: 700;
@@ -346,7 +346,7 @@ nav a:hover,
 .contact-info,
 .lead-form,
 .overview-copy {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(29, 29, 27, 0.14);
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-md);

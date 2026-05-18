@@ -274,12 +274,14 @@ export default function Home() {
                         height={500}
                         className="portfolio-image"
                       />
-                      <div className="image-overlay">
-                        <span>{project.location}</span>
-                      </div>
+                      {project.location ? (
+                        <div className="image-overlay">
+                          <span>{project.location}</span>
+                        </div>
+                      ) : null}
                     </div>
                     <div className="portfolio-body">
-                      <p className="panel-label">{project.location}</p>
+                      {project.location ? <p className="panel-label">{project.location}</p> : null}
                       <h3>{project.title}</h3>
                       <p>{project.summary}</p>
                     </div>
