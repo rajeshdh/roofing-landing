@@ -207,7 +207,7 @@ export default function Home() {
               </label>
               <label>
                 Service Needed
-                <select name="service" required defaultValue="">
+                <select name="service" required defaultValue="" aria-label="Service Needed">
                   <option value="" disabled>
                     Select one
                   </option>
