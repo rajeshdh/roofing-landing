@@ -32,34 +32,16 @@ html {
 body {
   font-family: Inter, 'Segoe UI', system-ui, -apple-system, sans-serif;
   background:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
     radial-gradient(circle at top left, rgba(216, 157, 84, 0.2), transparent 32%),
     radial-gradient(circle at top right, rgba(47, 93, 98, 0.14), transparent 30%),
     linear-gradient(180deg, #fcfaf6 0%, var(--bg) 100%);
+  background-size: 120px 120px, 120px 120px, auto, auto, auto;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-  background-size: 120px 120px;
-  opacity: 0.26;
-  pointer-events: none;
-  z-index: -2;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(252, 250, 246, 0.1) 0%, rgba(245, 241, 233, 0.75) 100%);
-  pointer-events: none;
-  z-index: -1;
 }
 
 img {

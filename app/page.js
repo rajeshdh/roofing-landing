@@ -62,7 +62,7 @@ export default function Home() {
     description: 'Premium installation, repair, and maintenance solutions tailored to your property.',
   };
   const secondaryServices = siteContent.services.slice(1);
-  const requestedServices = (secondaryServices.length ? secondaryServices : siteContent.services).slice(0, 3);
+  const requestedServices = secondaryServices.length ? secondaryServices.slice(0, 3) : [];
 
   return (
     <>
@@ -117,8 +117,8 @@ export default function Home() {
                 </a>
               </div>
               <ul className="hero-points">
-                {highlights.map((item, index) => (
-                  <li key={`highlight-${index}`}>{item}</li>
+                {highlights.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
               <div className="trust-bar">
@@ -163,9 +163,11 @@ export default function Home() {
                   <article className="hero-panel-card compact-panel-card">
                     <p className="panel-label">Most requested</p>
                     <ul className="service-chip-list">
-                      {requestedServices.map((service) => (
-                        <li key={service.title}>{service.title}</li>
-                      ))}
+                      {requestedServices.length
+                        ? requestedServices.map((service, index) => (
+                            <li key={`${service.title}-${index}`}>{service.title}</li>
+                          ))
+                        : <li>{featuredService.title}</li>}
                     </ul>
                   </article>
                   <article className="hero-panel-card compact-panel-card accent-panel-card">
