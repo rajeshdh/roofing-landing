@@ -208,7 +208,7 @@ nav a:hover,
   height: 34rem;
   background: radial-gradient(circle at 20% 20%, rgba(216, 157, 84, 0.22), transparent 34%),
     radial-gradient(circle at 80% 30%, rgba(47, 93, 98, 0.17), transparent 32%);
-  filter: blur(18px);
+  filter: blur(10px);
   pointer-events: none;
 }
 

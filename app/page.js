@@ -62,7 +62,7 @@ export default function Home() {
     description: 'Premium installation, repair, and maintenance solutions tailored to your property.',
   };
   const secondaryServices = siteContent.services.slice(1);
-  const requestedServices = secondaryServices.length ? secondaryServices.slice(0, 3) : [];
+  const requestedServices = secondaryServices.slice(0, 3);
 
   return (
     <>
@@ -163,11 +163,9 @@ export default function Home() {
                   <article className="hero-panel-card compact-panel-card">
                     <p className="panel-label">Most requested</p>
                     <ul className="service-chip-list">
-                      {requestedServices.length
-                        ? requestedServices.map((service, index) => (
-                            <li key={`${service.title}-${index}`}>{service.title}</li>
-                          ))
-                        : <li>{featuredService.title}</li>}
+                      {(requestedServices.length ? requestedServices : [featuredService]).map((service, index) => (
+                        <li key={`${service.title}-${index}`}>{service.title}</li>
+                      ))}
                     </ul>
                   </article>
                   <article className="hero-panel-card compact-panel-card accent-panel-card">
@@ -270,31 +268,35 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <div className="portfolio-grid portfolio-grid-editorial">
-              {siteContent.portfolio.map((project, i) => (
-                <ScrollReveal key={project.title} delay={i * 100}>
-                  <article className={`portfolio-card ${i === 0 ? 'portfolio-card-featured' : ''}`}>
-                    <div className="image-frame">
-                      <Image
-                        src={project.image}
-                        alt={project.alt}
-                        width={720}
-                        height={500}
-                        className="portfolio-image"
-                      />
-                      {project.location ? (
-                        <div className="image-overlay">
-                          <span>{project.location}</span>
-                        </div>
-                      ) : null}
-                    </div>
-                    <div className="portfolio-body">
-                      {project.location ? <p className="panel-label">{project.location}</p> : null}
-                      <h3>{project.title}</h3>
-                      <p>{project.summary}</p>
-                    </div>
-                  </article>
-                </ScrollReveal>
-              ))}
+              {siteContent.portfolio.map((project, i) => {
+                const location = project.location?.trim();
+
+                return (
+                  <ScrollReveal key={project.title} delay={i * 100}>
+                    <article className={`portfolio-card ${i === 0 ? 'portfolio-card-featured' : ''}`}>
+                      <div className="image-frame">
+                        <Image
+                          src={project.image}
+                          alt={project.alt}
+                          width={720}
+                          height={500}
+                          className="portfolio-image"
+                        />
+                        {location ? (
+                          <div className="image-overlay">
+                            <span>{location}</span>
+                          </div>
+                        ) : null}
+                      </div>
+                      <div className="portfolio-body">
+                        {location ? <p className="panel-label">{location}</p> : null}
+                        <h3>{project.title}</h3>
+                        <p>{project.summary}</p>
+                      </div>
+                    </article>
+                  </ScrollReveal>
+                );
+              })}
             </div>
           </div>
         </section>
