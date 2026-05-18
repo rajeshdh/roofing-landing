@@ -5,7 +5,7 @@ Modern, elegant, SEO-focused landing page built with Next.js to generate roofing
 ## Run locally
 
 ```bash
-cd /home/runner/work/roofing-landing/roofing-landing
+cd roofing-landing
 npm install
 npm run dev
 ```
@@ -23,7 +23,7 @@ npm run build
 
 Main editable content is in:
 
-- `/home/runner/work/roofing-landing/roofing-landing/content/site-content.json`
+- `content/site-content.json`
 
 You can add/update:
 
