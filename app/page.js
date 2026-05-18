@@ -30,6 +30,11 @@ const highlights = [
   'Fast estimate turnaround',
 ];
 
+const fallbackService = {
+  title: 'Roofing Services',
+  description: 'Premium installation, repair, and maintenance solutions tailored to your property.',
+};
+
 const serviceIcons = {
   'Residential Roof Replacement': (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -57,10 +62,7 @@ const serviceIcons = {
 const currentYear = new Date().getFullYear();
 
 export default function Home() {
-  const featuredService = siteContent.services[0] ?? {
-    title: 'Roofing Services',
-    description: 'Premium installation, repair, and maintenance solutions tailored to your property.',
-  };
+  const featuredService = siteContent.services[0] ?? fallbackService;
   const secondaryServices = siteContent.services.slice(1);
   const requestedServices = secondaryServices.slice(0, 3);
 
@@ -163,8 +165,8 @@ export default function Home() {
                   <article className="hero-panel-card compact-panel-card">
                     <p className="panel-label">Most requested</p>
                     <ul className="service-chip-list">
-                      {(requestedServices.length ? requestedServices : [featuredService]).map((service, index) => (
-                        <li key={`${service.title}-${index}`}>{service.title}</li>
+                      {(requestedServices.length ? requestedServices : [featuredService]).map((service) => (
+                        <li key={service.title}>{service.title}</li>
                       ))}
                     </ul>
                   </article>
@@ -315,8 +317,8 @@ export default function Home() {
                   <ScrollReveal key={item.id} delay={i * 90}>
                     <article className="testimonial">
                       <div className="stars" aria-label="5 out of 5 stars">
-                        {['★', '★', '★', '★', '★'].map((star, idx) => (
-                          <span key={idx} className="star">{star}</span>
+                        {['★', '★', '★', '★', '★'].map((_, idx) => (
+                          <span key={idx} className="star">★</span>
                         ))}
                       </div>
                       <p className="testimonial-quote">{item.quote}</p>
