@@ -13,6 +13,9 @@ export default function ScrollReveal({ children, className = '', delay = 0 }) {
     const el = ref.current;
     if (!el) return;
 
+    // Trigger when at least 12% of the element is visible
+    const REVEAL_THRESHOLD = 0.12;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -21,7 +24,7 @@ export default function ScrollReveal({ children, className = '', delay = 0 }) {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12 },
+      { threshold: REVEAL_THRESHOLD },
     );
     observer.observe(el);
     return () => observer.disconnect();

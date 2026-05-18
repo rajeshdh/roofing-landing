@@ -16,11 +16,13 @@ export default function AnimatedCounter({ value, label }) {
     const el = ref.current;
     if (!el) return;
 
+    const ANIMATION_DURATION_MS = 1600;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
-          const duration = 1600;
+          const duration = ANIMATION_DURATION_MS;
           const start = performance.now();
           const tick = (now) => {
             const elapsed = now - start;
