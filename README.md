@@ -27,3 +27,7 @@ You can add/update:
 - FAQ items
 
 The page automatically renders those sections from this JSON file.
+
+## Lead form handling
+
+The contact form posts to `https://formsubmit.co/` (HTTPS) so leads can be captured without a custom backend. Replace this with your own preferred backend/CMS form endpoint at deployment time if needed.
