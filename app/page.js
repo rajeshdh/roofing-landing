@@ -128,7 +128,7 @@ export default function Home() {
             </div>
             <div className="testimonial-grid" aria-live="polite">
               {siteContent.testimonials.map((item) => (
-                <article className="testimonial" key={`${item.author}-${item.quote.slice(0, 16)}`}>
+                <article className="testimonial" key={item.id}>
                   <p>{item.quote}</p>
                   <p className="portfolio-meta">
                     <strong>{item.author}</strong> — {item.role}
@@ -185,7 +185,14 @@ export default function Home() {
             >
               <input type="hidden" name="_subject" value="New Basile Contractors LLC lead" />
               <input type="hidden" name="_template" value="table" />
-              <input type="text" name="_honey" autoComplete="off" className="honeypot" aria-hidden="true" />
+              <input
+                type="text"
+                name="_honey"
+                autoComplete="off"
+                className="honeypot"
+                aria-hidden="true"
+                tabIndex={-1}
+              />
               <label>
                 Full Name
                 <input type="text" name="name" required />
