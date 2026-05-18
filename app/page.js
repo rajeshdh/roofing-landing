@@ -57,7 +57,12 @@ const serviceIcons = {
 const currentYear = new Date().getFullYear();
 
 export default function Home() {
-  const [featuredService, ...secondaryServices] = siteContent.services;
+  const featuredService = siteContent.services[0] ?? {
+    title: 'Roofing Services',
+    description: 'Premium installation, repair, and maintenance solutions tailored to your property.',
+  };
+  const secondaryServices = siteContent.services.slice(1);
+  const requestedServices = (secondaryServices.length ? secondaryServices : siteContent.services).slice(0, 3);
 
   return (
     <>
@@ -112,8 +117,8 @@ export default function Home() {
                 </a>
               </div>
               <ul className="hero-points">
-                {highlights.map((item) => (
-                  <li key={item}>{item}</li>
+                {highlights.map((item, index) => (
+                  <li key={`highlight-${index}`}>{item}</li>
                 ))}
               </ul>
               <div className="trust-bar">
@@ -158,7 +163,7 @@ export default function Home() {
                   <article className="hero-panel-card compact-panel-card">
                     <p className="panel-label">Most requested</p>
                     <ul className="service-chip-list">
-                      {siteContent.services.slice(0, 3).map((service) => (
+                      {requestedServices.map((service) => (
                         <li key={service.title}>{service.title}</li>
                       ))}
                     </ul>
