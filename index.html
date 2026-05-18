@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basile Contractors LLC | Roofing Experts</title>
+    <meta
+      name="description"
+      content="Basile Contractors LLC delivers premium residential and commercial roofing solutions. Request a free estimate and view our recent roofing portfolio."
+    />
+    <meta
+      name="keywords"
+      content="Basile Contractors LLC, roofing contractor, roof replacement, roof repair, roofing portfolio, emergency roofing"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://basilecontractorsllc.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Basile Contractors LLC | Roofing Experts" />
+    <meta
+      property="og:description"
+      content="Beautiful roofs built to last. Explore our projects and request a free estimate today."
+    />
+    <meta property="og:url" content="https://basilecontractorsllc.com/" />
+    <meta property="og:image" content="https://basilecontractorsllc.com/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#111827" />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Basile Contractors LLC home">Basile Contractors LLC</a>
+        <nav aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact" class="cta-link">Get Estimate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="container hero-content">
+          <p class="eyebrow">Premium Roofing Solutions</p>
+          <h1>Elegant Roofing Crafted for Long-Term Protection</h1>
+          <p class="hero-copy">
+            Basile Contractors LLC helps homeowners and businesses protect their properties with
+            high-performance roofing, beautiful finishes, and dependable project delivery.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Request Free Estimate</a>
+            <a href="tel:+12015550123" class="btn btn-secondary">Call (201) 555-0123</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats reveal">
+        <div class="container stat-grid">
+          <article>
+            <h2>12+</h2>
+            <p>Years of Roofing Excellence</p>
+          </article>
+          <article>
+            <h2>450+</h2>
+            <p>Projects Completed</p>
+          </article>
+          <article>
+            <h2>24/7</h2>
+            <p>Emergency Roof Support</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">What We Do</p>
+            <h2>Roofing Services Built for Performance and Curb Appeal</h2>
+          </div>
+          <div id="services-grid" class="card-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section section-dark reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Recent Work</p>
+            <h2>Project Portfolio</h2>
+          </div>
+          <div id="portfolio-grid" class="portfolio-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Client Feedback</p>
+            <h2>Trusted by Property Owners</h2>
+          </div>
+          <div id="testimonial-grid" class="testimonial-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">FAQ</p>
+            <h2>Answers Before You Start</h2>
+          </div>
+          <div id="faq-list" class="faq-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact reveal">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Get Started</p>
+            <h2>Request a Free Roofing Estimate</h2>
+            <p>
+              Tell us about your roof and we will follow up quickly with a consultation and custom
+              quote.
+            </p>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> <a href="tel:+12015550123">(201) 555-0123</a></li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:info@basilecontractorsllc.com">info@basilecontractorsllc.com</a>
+              </li>
+              <li><strong>Service Area:</strong> Northern New Jersey & nearby counties</li>
+            </ul>
+          </div>
+          <form class="lead-form" action="mailto:info@basilecontractorsllc.com" method="post" enctype="text/plain">
+            <label>
+              Full Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Service Needed
+              <select name="service" required>
+                <option value="">Select one</option>
+                <option>Roof Replacement</option>
+                <option>Roof Repair</option>
+                <option>Commercial Roofing</option>
+                <option>Emergency Roofing</option>
+              </select>
+            </label>
+            <label>
+              Project Details
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Basile Contractors LLC. All rights reserved.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RoofingContractor",
+        "name": "Basile Contractors LLC",
+        "url": "https://basilecontractorsllc.com/",
+        "telephone": "+1-201-555-0123",
+        "email": "info@basilecontractorsllc.com",
+        "areaServed": "Northern New Jersey",
+        "priceRange": "$$",
+        "description": "Residential and commercial roofing contractor specializing in roof replacement, repairs, and emergency roofing services."
+      }
+    </script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
