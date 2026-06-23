@@ -1,4 +1,7 @@
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
+import business from '@/content/business.js';
+import AnalyticsTracker from './components/AnalyticsTracker';
 import './globals.css';
 
 const inter = Inter({
@@ -7,27 +10,30 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const siteUrl = 'https://basilecontractorsllc.com';
+const siteUrl = business.url;
+// 150–160 chars, keyword + location front-loaded (spec §5.2).
 const description =
-  'Basile Contractors LLC delivers premium residential and commercial roofing solutions with beautiful finishes, modern materials, and dependable project execution.';
+  'Licensed, insured roofing contractor serving Miami-Dade, Broward & Palm Beach. 24/7 emergency roof repair, replacement & storm damage. Free inspection — call today.';
+// 50–60 chars, keyword + location (spec §5.2).
+const title = 'South Florida Roofing Contractor | Basile Contractors';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Basile Contractors LLC | Roofing Experts',
+  title,
   description,
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Basile Contractors LLC | Roofing Experts',
+    title,
     description,
     url: siteUrl,
-    siteName: 'Basile Contractors LLC',
+    siteName: business.name,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Basile Contractors LLC | Roofing Experts',
+    title,
     description,
   },
   robots: {
@@ -35,6 +41,9 @@ export const metadata = {
     follow: true,
   },
 };
+
+const { ga4MeasurementId, googleAdsId } = business;
+const analyticsEnabled = Boolean(ga4MeasurementId || googleAdsId);
 
 export default function RootLayout({ children }) {
   return (
@@ -51,7 +60,32 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnalyticsTracker />
+
+        {/*
+          Google Analytics 4 / Google Ads (spec §8.1). Renders only once an ID
+          is set in content/business.js, so it has zero impact until configured.
+        */}
+        {analyticsEnabled ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId || googleAdsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                ${ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}');` : ''}
+                ${googleAdsId ? `gtag('config', '${googleAdsId}');` : ''}
+              `}
+            </Script>
+          </>
+        ) : null}
+      </body>
     </html>
   );
 }
