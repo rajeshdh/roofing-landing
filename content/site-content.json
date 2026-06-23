@@ -1,77 +1,93 @@
 {
   "services": [
     {
-      "title": "Residential Roof Replacement",
-      "description": "High-quality replacement systems with dimensional shingles, leak protection, and clean architectural finishes."
+      "title": "Roof Replacement",
+      "description": "Full tile, metal, and shingle roof replacements engineered for South Florida sun, heat, and High-Velocity Hurricane Zone (HVHZ) wind codes."
     },
     {
       "title": "Roof Repair & Leak Response",
-      "description": "Targeted repair services for storm damage, flashing issues, and active leaks with rapid turnaround."
+      "description": "Fast repairs for active leaks, cracked tiles, and flashing failures — with same-day temporary protection to stop water intrusion."
     },
     {
-      "title": "Commercial Roofing",
-      "description": "Flat and low-slope roofing solutions built for durability, drainage performance, and lower maintenance."
+      "title": "Storm & Hurricane Damage",
+      "description": "Post-storm inspections, emergency tarping, and full photo documentation to support and speed up your insurance claim."
     },
     {
-      "title": "Preventive Roof Maintenance",
-      "description": "Proactive inspections and maintenance programs that extend roof life and reduce emergency costs."
+      "title": "Commercial & Flat Roofing",
+      "description": "TPO, PVC, and modified-bitumen flat-roof systems built for drainage performance, durability, and lower long-term maintenance."
+    },
+    {
+      "title": "Roof Inspections & Maintenance",
+      "description": "Free roof inspections and proactive maintenance programs that catch problems early and extend the life of your roof."
     }
   ],
   "portfolio": [
     {
-      "title": "Premium Asphalt Roof Transformation",
-      "location": "Glen Rock, NJ",
-      "summary": "Replaced aging roof with weather-resistant architectural shingles and upgraded ventilation.",
+      "title": "HVHZ Tile Roof Replacement",
+      "location": "Boca Raton, FL",
+      "summary": "Replaced a storm-worn barrel tile roof with HVHZ-rated concrete tile and upgraded peel-and-stick underlayment.",
       "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1200&q=80",
-      "alt": "Large suburban house with new premium asphalt shingle roof"
+      "alt": "South Florida home with a newly installed concrete tile roof"
     },
     {
-      "title": "Luxury Metal Roofing Installation",
-      "location": "Edgewater, NJ",
-      "summary": "Installed standing seam metal roof for sleek aesthetics and long-term resilience.",
+      "title": "Standing Seam Metal Roof",
+      "location": "Fort Lauderdale, FL",
+      "summary": "Installed a wind-rated standing seam metal roof for coastal durability, energy savings, and a clean modern look.",
       "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
-      "alt": "Modern home featuring a standing seam metal roof"
+      "alt": "Modern South Florida home featuring a standing seam metal roof"
     },
     {
       "title": "Commercial Flat Roof Retrofit",
-      "location": "Paterson, NJ",
-      "summary": "Full membrane retrofit and drainage optimization for a commercial facility.",
+      "location": "Miami, FL",
+      "summary": "Full TPO membrane retrofit with improved drainage and tapered insulation for a Miami commercial facility.",
       "image": "https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&w=1200&q=80",
-      "alt": "Commercial building with a newly installed flat roof system"
+      "alt": "Miami commercial building with a newly installed flat TPO roof system"
     }
   ],
   "testimonials": [
     {
-      "id": "melissa-g-homeowner",
-      "quote": "Excellent communication and flawless craftsmanship. The roof changed the look of our whole home.",
+      "id": "melissa-g-boca-raton",
+      "quote": "After the storm, they had a crew out same-day to tarp the roof and documented everything for our insurance. The new tile roof looks incredible.",
       "author": "Melissa G.",
-      "role": "Homeowner"
+      "role": "Homeowner · Boca Raton"
     },
     {
-      "id": "r-thompson-business-owner",
-      "quote": "Basile Contractors delivered ahead of schedule and kept our business operations running smoothly.",
+      "id": "r-thompson-miami",
+      "quote": "Basile re-roofed our commercial building ahead of schedule and kept operations running. Their flat-roof work has been leak-free through hurricane season.",
       "author": "R. Thompson",
-      "role": "Business Owner"
+      "role": "Property Manager · Miami"
     },
     {
-      "id": "carla-m-homeowner",
-      "quote": "Very professional team, fair pricing, and the cleanup was spotless. Highly recommended.",
+      "id": "carla-m-fort-lauderdale",
+      "quote": "Free inspection, a same-day estimate, and fair pricing. Licensed, insured, and the cleanup was spotless. Highly recommended.",
       "author": "Carla M.",
-      "role": "Homeowner"
+      "role": "Homeowner · Fort Lauderdale"
     }
   ],
   "faq": [
     {
+      "question": "Do you help with roof insurance claims after a storm?",
+      "answer": "Yes. We perform a post-storm inspection, provide emergency tarping when needed, and document all damage with photos and reports so your insurance adjuster has what they need to process the claim quickly."
+    },
+    {
+      "question": "Are your roofs hurricane and HVHZ rated?",
+      "answer": "Absolutely. Every system we install meets or exceeds Florida's High-Velocity Hurricane Zone (HVHZ) building codes, with components rated for the high wind speeds South Florida sees during hurricane season."
+    },
+    {
       "question": "What roofing materials do you install?",
-      "answer": "We install architectural shingles, metal roofing systems, and commercial membrane roofing based on your property needs."
+      "answer": "We install concrete and clay tile, standing seam and metal roofing, architectural asphalt shingles, and commercial flat-roof systems (TPO, PVC, and modified bitumen) based on your property and budget."
     },
     {
-      "question": "Do you provide free estimates?",
-      "answer": "Yes, every project starts with a free estimate and detailed consultation."
+      "question": "Do you provide free estimates and inspections?",
+      "answer": "Yes. Every project starts with a free roof inspection and a same-day estimate, with a clear, written scope so you know exactly what is included."
     },
     {
-      "question": "Are your projects insured and warrantied?",
-      "answer": "Absolutely. We carry proper insurance and provide workmanship coverage along with manufacturer warranties."
+      "question": "How fast can you respond to an emergency roof leak?",
+      "answer": "We answer calls 24/7 and provide same-day emergency response across Miami-Dade, Broward, and Palm Beach with temporary protection to stop water intrusion until a full repair can be scheduled."
+    },
+    {
+      "question": "Are you licensed and insured in Florida?",
+      "answer": "Yes. Basile Contractors is a licensed and fully insured South Florida roofing contractor, and we back our work with manufacturer warranties and workmanship coverage."
     }
   ]
 }

@@ -1,7 +1,9 @@
+import business from '@/content/business.js';
+
 export default function sitemap() {
   return [
     {
-      url: 'https://basilecontractorsllc.com',
+      url: business.url,
       changeFrequency: 'weekly',
       priority: 1,
     },

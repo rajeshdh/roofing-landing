@@ -1,9 +1,11 @@
+import business from '@/content/business.js';
+
 export default function robots() {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://basilecontractorsllc.com/sitemap.xml',
+    sitemap: `${business.url}/sitemap.xml`,
   };
 }

@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: Inter, 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), 'Segoe UI', system-ui, -apple-system, sans-serif;
   background:
     linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
@@ -82,13 +82,18 @@ h3 {
   margin: 0 auto;
 }
 
-.sr-hidden {
+/*
+  Scroll-reveal: content is visible by default so it still renders without
+  JavaScript. Hiding/animation only kicks in once the `.js` class is set on
+  <html> (see layout.js), and is then removed again by `.sr-visible`.
+*/
+.js .sr-hidden {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.sr-visible {
+.js .sr-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -901,5 +906,73 @@ select:focus {
 
   .site-header {
     position: static;
+  }
+}
+
+.form-note {
+  margin-top: 0.85rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+/* Sticky mobile conversion bar — hidden on desktop, fixed bottom on phones. */
+.mobile-cta-bar {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .mobile-cta-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 0.6rem 0.85rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: rgba(253, 251, 247, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line-strong);
+    box-shadow: 0 -10px 30px rgba(57, 42, 18, 0.12);
+  }
+
+  .mobile-cta-bar .btn {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Keep the fixed bar from covering footer content. */
+  body {
+    padding-bottom: 5.25rem;
+  }
+}
+
+/*
+  Respect users who prefer reduced motion: show scroll-reveal content
+  immediately, disable smooth scrolling, and neutralize transitions/animations.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .sr-hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
