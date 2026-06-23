@@ -282,6 +282,7 @@ export default function Home() {
                           alt={project.alt}
                           width={720}
                           height={500}
+                          sizes="(max-width: 820px) 100vw, 580px"
                           className="portfolio-image"
                         />
                         {location ? (

@@ -1,4 +1,11 @@
+import { Inter } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 const siteUrl = 'https://basilecontractorsllc.com';
 const description =
@@ -31,7 +38,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        {/*
+          Mark JS as available before first paint. Scroll-reveal styles are
+          scoped to `.js` so that, without JavaScript, all content stays
+          visible instead of being stuck at opacity:0.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
